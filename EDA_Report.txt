@@ -1,0 +1,73 @@
+HOTEL BOOKINGS EDA REPORT
+==================================================
+
+Dataset Shape: (84440, 36)
+
+Data Types:
+hotel                                 str
+is_canceled                         int64
+lead_time                           int64
+arrival_date_year                   int64
+arrival_date_month                    str
+arrival_date_week_number            int64
+arrival_date_day_of_month           int64
+stays_in_weekend_nights             int64
+stays_in_week_nights                int64
+adults                              int64
+children                          float64
+babies                              int64
+meal                                  str
+country                               str
+market_segment                        str
+distribution_channel                  str
+is_repeated_guest                   int64
+previous_cancellations              int64
+previous_bookings_not_canceled      int64
+reserved_room_type                    str
+assigned_room_type                    str
+booking_changes                     int64
+deposit_type                          str
+agent                             float64
+company                           float64
+days_in_waiting_list                int64
+customer_type                         str
+adr                               float64
+required_car_parking_spaces         int64
+total_of_special_requests           int64
+reservation_status                    str
+reservation_status_date               str
+total_stay                          int64
+total_guests                      float64
+is_family                           int64
+booking_season                        str
+dtype: object
+
+Summary Statistics:
+        is_canceled     lead_time  arrival_date_year  arrival_date_week_number  ...  total_of_special_requests    total_stay  total_guests     is_family
+count  84440.000000  84440.000000       84440.000000              84440.000000  ...               84440.000000  84440.000000  84440.000000  84440.000000
+mean       0.272631     80.450414        2016.201125                 26.722406  ...                   0.694339      3.619564      1.997797      0.147762
+std        0.445315     86.511040           0.685902                 13.794487  ...                   0.827563      2.752404      0.767286      0.354866
+min        0.000000      0.000000        2015.000000                  1.000000  ...                   0.000000      0.000000      0.000000      0.000000
+25%        0.000000     11.000000        2016.000000                 15.000000  ...                   0.000000      2.000000      2.000000      0.000000
+50%        0.000000     50.000000        2016.000000                 27.000000  ...                   0.000000      3.000000      2.000000      0.000000
+75%        1.000000    126.000000        2017.000000                 37.000000  ...                   1.000000      5.000000      2.000000      0.000000
+max        1.000000    737.000000        2017.000000                 53.000000  ...                   5.000000     57.000000     55.000000      1.000000
+
+[8 rows x 23 columns]
+
+Top Correlations With Cancellation:
+is_canceled             1.000000
+lead_time               0.183830
+adr                     0.132279
+total_guests            0.094127
+arrival_date_year       0.084017
+adults                  0.080396
+total_stay              0.080168
+stays_in_week_nights    0.079495
+is_family               0.058183
+children                0.057539
+Name: is_canceled, dtype: float64
+
+T-Test Results
+T Statistic: 54.34387183475127
+P Value: 0.0
